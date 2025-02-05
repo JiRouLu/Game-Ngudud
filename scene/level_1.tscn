@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcco56w13kgnt"]
+
+[ext_resource type="Texture2D" uid="uid://xjkumd1wfqmx" path="res://asset/background_layer_1.png" id="1_q3j82"]
+
+[sub_resource type="TileSet" id="TileSet_m1sdv"]
+
+[node name="level 1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577.5, 323.5)
+scale = Vector2(3.59063, 3.57222)
+texture = ExtResource("1_q3j82")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_m1sdv")
+format = 2
