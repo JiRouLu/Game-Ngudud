@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://xmj0fn6784la"]
+
+[ext_resource type="Texture2D" uid="uid://2wddntdtk47h" path="res://asset/dolpin.jpg" id="1_2xfhi"]
+
+[node name="cobaa2" type="Sprite2D"]
+position = Vector2(608, 248)
+texture = ExtResource("1_2xfhi")
