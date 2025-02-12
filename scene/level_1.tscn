@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcco56w13kgnt"]
+[gd_scene load_steps=4 format=3 uid="uid://dcco56w13kgnt"]
 
+[ext_resource type="PackedScene" uid="uid://crexrj1ueurhd" path="res://scene/player.tscn" id="1_6lfjd"]
 [ext_resource type="Texture2D" uid="uid://xjkumd1wfqmx" path="res://asset/background_layer_1.png" id="1_q3j82"]
 
 [sub_resource type="TileSet" id="TileSet_m1sdv"]
@@ -14,3 +15,6 @@ texture = ExtResource("1_q3j82")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m1sdv")
 format = 2
+
+[node name="player" parent="TileMap" instance=ExtResource("1_6lfjd")]
+position = Vector2(159, 501)
