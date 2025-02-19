@@ -43,4 +43,4 @@ func _on_button_pressed() -> void:
 		# Jika kalimat terakhir, tampilkan tombol SceneChange
 		$Panel/Button.visible = false
 		$Button.visible = true
-		get_tree().change_scene_to_file("res://scene/cobaa_2.tscn")
+		get_tree().change_scene_to_file("res://scene/level_2.tscn")
