@@ -1,19 +1,39 @@
 extends CharacterBody2D
 
-@export var speed: float = 200  # Kecepatan jalan
-@export var jump_force: float = 400  # Kekuatan lompat
-@export var gravity: float = 980  # Gravitasi
+class_name player
+
+@export var speed: float = 175  # Kecepatan jalan
+@export var jump_force: float = 325  # Kekuatan lompat
+@export var gravity: float = 1080  # Gravitasi
+
+@export var jump_buffer_time: float = 0.2  # Waktu buffer untuk lompat
+var jump_buffer_timer: float = 0  # Timer buffer lompat
 
 @onready var sprite = $AnimatedSprite2D  # Ambil node AnimatedSprite2D
 
+var is_dead: bool = false  # Status apakah pemain mati
+
 func _physics_process(delta):
-	# Terapkan gravitasi saat tidak di lantai
+	if is_dead:
+		velocity = Vector2.ZERO  # Hentikan pergerakan jika mati
+		return
+
+	# Terapkan gravitasi
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Lompatan
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	# Cek tombol lompat ditekan
+	if Input.is_action_just_pressed("jump"):
+		jump_buffer_timer = jump_buffer_time  # Set buffer waktu lompat
+
+	# Jika buffer waktu masih ada dan pemain di lantai, lakukan lompat
+	if jump_buffer_timer > 0 and is_on_floor():
 		velocity.y = -jump_force
+		jump_buffer_timer = 0  # Reset buffer agar tidak lompat terus-menerus
+
+	# Update timer buffer lompat
+	if jump_buffer_timer > 0:
+		jump_buffer_timer -= delta
 
 	# Gerakan kiri/kanan
 	var direction = Input.get_axis("left", "right")
@@ -34,3 +54,7 @@ func _physics_process(delta):
 
 	# Terapkan pergerakan
 	move_and_slide()
+
+func die():
+	is_dead = true
+	sprite.play("die")  # Mainkan animasi mati
