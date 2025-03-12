@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b31ieoqmjrx8h"
+path="res://.godot/imported/Jungle and Rainforest Sound Effects - Tropical Forest Ambiences from Costa Rica.mp3-f94975e892b28ae608960715d60f2854.mp3str"
+
+[deps]
+
+source_file="res://asset/Jungle and Rainforest Sound Effects - Tropical Forest Ambiences from Costa Rica.mp3"
+dest_files=["res://.godot/imported/Jungle and Rainforest Sound Effects - Tropical Forest Ambiences from Costa Rica.mp3-f94975e892b28ae608960715d60f2854.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

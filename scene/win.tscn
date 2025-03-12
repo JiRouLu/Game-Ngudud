@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://xb75puhw1tdx"]
+
+[ext_resource type="Texture2D" uid="uid://ctdguy6vqvek1" path="res://asset/plx-1.png" id="1_l686v"]
+[ext_resource type="Texture2D" uid="uid://dp1hg35c6tno2" path="res://asset/plx-2.png" id="2_onkp1"]
+[ext_resource type="Texture2D" uid="uid://8kma3c3dbncf" path="res://asset/plx-3.png" id="3_vjkwn"]
+[ext_resource type="Texture2D" uid="uid://dw5r5gkcqifeb" path="res://asset/plx-4.png" id="4_kthkb"]
+[ext_resource type="Texture2D" uid="uid://b1v1b4amk6nwy" path="res://asset/plx-5.png" id="5_t5dpu"]
+[ext_resource type="FontFile" uid="uid://db623dsxq3hfb" path="res://asset/PixelifySans-VariableFont_wght.ttf" id="6_0a8r5"]
+
+[node name="win" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(707, 325)
+scale = Vector2(1.21875, 1)
+texture = ExtResource("1_l686v")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(705.5, 325)
+scale = Vector2(1.21615, 1)
+texture = ExtResource("2_onkp1")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(705.5, 325)
+scale = Vector2(1.21615, 1)
+texture = ExtResource("3_vjkwn")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(707, 325)
+scale = Vector2(1.21875, 1)
+texture = ExtResource("4_kthkb")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(707, 325)
+scale = Vector2(1.21875, 1)
+texture = ExtResource("5_t5dpu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 444.0
+offset_top = 262.0
+offset_right = 865.0
+offset_bottom = 415.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_0a8r5")
+theme_override_font_sizes/font_size = 40
+text = "SELAMAT! ANDA TELAH 
+BERHASIL KELUAR DARI 
+ 	 	       HUTAN MITOS"

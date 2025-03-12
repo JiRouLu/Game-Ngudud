@@ -22,10 +22,6 @@ func _on_reload_3_body_entered(body: Node2D) -> void:
 		get_tree().reload_current_scene()
 
 
-func _on_win_body_entered(body: Node2D) -> void:
-	if body is player:
-		get_tree().change_scene_to_file("win.tcsn")
-
 
 func _on_trap_body_entered(body: Node2D) -> void:
 	if body is player:
@@ -40,3 +36,9 @@ func _on_trap_2_body_entered(body: Node2D) -> void:
 func _on_trap_3_body_entered(body: Node2D) -> void:
 	if body is player:
 		get_tree().reload_current_scene()
+		
+
+
+func _on_menang_body_entered(body: Node2D) -> void:
+	if body is player:
+		get_tree().change_scene_to_file("res://scene/win.tscn")

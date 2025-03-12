@@ -1,6 +1,6 @@
 extends Control
 
-var sentence = "Seorang penjelajah muda, Alex, dikenal karena keberanian dan rasa ingin tahunya yang besar. Suatu hari, ia memutuskan untuk menjelajahi hutan terpencil yang dikelilingi mitos tentang Entitas Hitam yang menghuni tempat itu. Saat menjelajahi bagian terdalam hutan, ia menemukan sebuah altar kuno yang penuh ukiran misterius. Ketika Alex menyentuh salah satu simbol, suara gemuruh terdengar, dan bayangan hitam besar mulai mengejarnya."
+var sentence = "Seorang penjelajah muda, Alex, dikenal karena keberanian dan rasa ingin tahunya yang besar. Suatu hari, ia memutuskan untuk menjelajahi hutan terpencil yang dikelilingi mitos tentang Entitas Hitam yang menghuni tempat itu. Saat menjelajahi bagian terdalam hutan, ia menemukan sebuah altar kuno yang penuh ukiran misterius. Ketika Alex menyentuh salah satu simbol, suara gemuruh terdengar, dan seketika Alex terjebak di dalam hutan tersebut."
 var sentences = []  # Untuk memecah teks menjadi bagian-bagian
 var current_sentence_index = 0  # Indeks kalimat saat ini
 var sen_index = 0  # Indeks karakter dalam kalimat
@@ -43,4 +43,4 @@ func _on_button_pressed() -> void:
 		# Jika kalimat terakhir, tampilkan tombol SceneChange
 		$Panel/Button.visible = false
 		$Button.visible = true
-		get_tree().change_scene_to_file("res://scene/level_2.tscn")
+		get_tree().change_scene_to_file("res://scene/nambawan.tscn")
